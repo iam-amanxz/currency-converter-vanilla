@@ -1,19 +1,22 @@
 const currency = document.querySelector("#currency");
 const text1= document.querySelector(".text1");
 const text2= document.querySelector(".text2");
+const text3= document.querySelector(".text3");
+const Form = document.querySelector("form");
 
-weatherForm.addEventListener("submit", e => {
+function refreshPage() {
+  window.location.reload();
+}
+Form.addEventListener("submit", e => {
     e.preventDefault();
+    
   
-    const toValue = text1.value;
-    const fromValue = text2.value;  
-  
-    fetch("/currency?from=" + fromValue+"to="+toValue).then(response => {
+    fetch("http://localhost:3000/currency").then(response => {
       response.json().then(data => {
         if (data.error) {
-          currency.textContent = data.error;
+          console.log(data.error);
         } else {
-          currency.textContent = data.location;
+          currency.textContent = data.body;
         }
       });
     });
