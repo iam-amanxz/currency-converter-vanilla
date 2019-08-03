@@ -1,0 +1,30 @@
+.container {
+  padding-top: 3.5rem;
+  .wrapper__heading {
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wrapper__display {
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 40rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .wrapper__content {
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

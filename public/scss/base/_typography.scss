@@ -1,0 +1,31 @@
+.container {
+  .wrapper__heading {
+    &--primary {
+      font-weight: 500;
+      font-size: 2.5rem;
+    }
+    &--secondary {
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: $color--yellow;
+    }
+  }
+
+  .wrapper__display {
+    font-size: 2.5rem;
+  }
+
+  .wrapper__content {
+    input,
+    select,
+    button {
+      font-size: 1.8rem;
+      color: $color--text;
+    }
+    button {
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+      cursor: pointer;
+    }
+  }
+}

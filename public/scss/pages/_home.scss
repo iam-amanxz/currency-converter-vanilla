@@ -1,0 +1,41 @@
+.container {
+  // .wrapper__heading{
+
+  // }
+
+  .wrapper__display {
+    background: $color--secondary;
+    border-radius: 1rem;
+  }
+
+  .wrapper__content {
+    background: $color--secondary;
+    border-radius: 1rem;
+
+    input {
+      width: 75%;
+      background: $color--tertiary;
+      border: none;
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      text-align: right;
+    }
+    select {
+      width: 75%;
+      background: $color--tertiary;
+      border: none;
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      width: 75%;
+      border: none;
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(to right, $color--yellow, $color--pink);
+    }
+  }
+}
