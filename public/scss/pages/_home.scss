@@ -1,8 +1,4 @@
 .container {
-  // .wrapper__heading{
-
-  // }
-
   .wrapper__display {
     background: $color--secondary;
     border-radius: 1rem;
@@ -20,6 +16,9 @@
       padding: 1.5rem 2rem;
       margin-bottom: 2rem;
       text-align: right;
+      @include respond(sm-phone) {
+        width: 85%;
+      }
     }
     select {
       width: 75%;
@@ -28,14 +27,9 @@
       border-radius: 1rem;
       padding: 1.5rem 2rem;
       margin-bottom: 2rem;
-    }
-
-    button {
-      width: 75%;
-      border: none;
-      border-radius: 1rem;
-      padding: 1.5rem 2rem;
-      background: linear-gradient(to right, $color--yellow, $color--pink);
+      @include respond(sm-phone) {
+        width: 85%;
+      }
     }
   }
 }

@@ -9,10 +9,17 @@
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
-
+    width: 75%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(to right, $color--yellow, $color--pink);
     //Change for the <button> element
     border: none;
     cursor: pointer;
+    @include respond(sm-phone) {
+      width: 85%;
+    }
   }
 
   &:hover {

@@ -30,6 +30,24 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 31.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  html {
+    font-size: 50.25%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   font-family: Rubik, sans-serif;
   font-weight: 400;
@@ -47,7 +65,7 @@ body {
 .container .wrapper__heading--secondary {
   font-weight: 400;
   font-size: 1.5rem;
-  color: #f8a731;
+  color: #999;
 }
 
 .container .wrapper__display {
@@ -56,15 +74,16 @@ body {
 
 .container .wrapper__content input,
 .container .wrapper__content select,
-.container .wrapper__content button {
+.container .wrapper__content a {
   font-size: 1.8rem;
   color: #e6e6e6;
 }
 
-.container .wrapper__content button {
+.container .wrapper__content a {
   font-weight: 700;
   letter-spacing: 0.1rem;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -76,8 +95,20 @@ body {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   position: relative;
+  width: 75%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#f8a731), to(#ff4864));
+  background: linear-gradient(to right, #f8a731, #ff4864);
   border: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 28.125em) {
+  .btn, .btn:link, .btn:visited {
+    width: 85%;
+  }
 }
 
 .btn:hover {
@@ -142,6 +173,12 @@ body {
   text-align: right;
 }
 
+@media only screen and (max-width: 28.125em) {
+  .container .wrapper__content input {
+    width: 85%;
+  }
+}
+
 .container .wrapper__content select {
   width: 75%;
   background: #40415d;
@@ -151,23 +188,19 @@ body {
   margin-bottom: 2rem;
 }
 
-.container .wrapper__content button {
-  width: 75%;
-  border: none;
-  border-radius: 1rem;
-  padding: 1.5rem 2rem;
-  background: -webkit-gradient(linear, left top, right top, from(#f8a731), to(#ff4864));
-  background: linear-gradient(to right, #f8a731, #ff4864);
+@media only screen and (max-width: 28.125em) {
+  .container .wrapper__content select {
+    width: 85%;
+  }
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
 
 .container {
-  padding-top: 3.5rem;
-}
-
-.container .wrapper__heading {
-  margin: 0 auto;
-  padding: 1rem 0;
-  width: 45rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,6 +211,49 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 28.125em) {
+  .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 2rem;
+  }
+}
+
+.container .wrapper__heading {
+  margin: 0 auto;
+  padding: 1rem 0;
+  padding-top: 0;
+  width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 28.125em) {
+  .container .wrapper__heading {
+    width: 43rem;
+  }
+}
+
+@media only screen and (max-width: 21.875em) {
+  .container .wrapper__heading {
+    width: 37rem;
+  }
 }
 
 .container .wrapper__display {
@@ -197,6 +273,18 @@ body {
   margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 28.125em) {
+  .container .wrapper__display {
+    width: 43rem;
+  }
+}
+
+@media only screen and (max-width: 21.875em) {
+  .container .wrapper__display {
+    width: 37rem;
+  }
+}
+
 .container .wrapper__content {
   margin: 0 auto;
   padding: 2.5rem 0;
@@ -211,5 +299,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 28.125em) {
+  .container .wrapper__content {
+    width: 43rem;
+  }
+}
+
+@media only screen and (max-width: 21.875em) {
+  .container .wrapper__content {
+    width: 37rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

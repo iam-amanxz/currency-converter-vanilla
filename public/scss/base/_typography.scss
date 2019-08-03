@@ -7,7 +7,7 @@
     &--secondary {
       font-weight: 400;
       font-size: 1.5rem;
-      color: $color--yellow;
+      color: $color--text--fade;
     }
   }
 
@@ -18,14 +18,15 @@
   .wrapper__content {
     input,
     select,
-    button {
+    a {
       font-size: 1.8rem;
       color: $color--text;
     }
-    button {
+    a {
       font-weight: 700;
       letter-spacing: 0.1rem;
       cursor: pointer;
+      text-align: center;
     }
   }
 }
