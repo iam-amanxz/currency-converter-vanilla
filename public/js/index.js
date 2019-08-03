@@ -1,23 +1,43 @@
 const currency = document.querySelector("#currency");
-const text1= document.querySelector(".text1");
-const text2= document.querySelector(".text2");
-const text3= document.querySelector(".text3");
-const Form = document.querySelector("form");
-
-function refreshPage() {
-  window.location.reload();
-}
-Form.addEventListener("submit", e => {
-    e.preventDefault();
-    
+const btn = document.getElementById("getCurrency");
   
-    fetch("http://localhost:3000/currency").then(response => {
+function refreshPage() {
+    window.location.reload();
+}
+  
+btn.addEventListener("click", e => {
+  
+  let value = document.querySelector("#value")
+  let fromCurrency = document.getElementById("fromCurrency");
+  let toCurrency = document.getElementById("toCurrency");
+
+  if(value.value === ""){
+    value.value = 1;
+  }
+
+  value = value.value;
+  fromCurrency = fromCurrency.options[fromCurrency.selectedIndex].value;
+  toCurrency = toCurrency.options[toCurrency.selectedIndex].value;
+  const data = {
+      value:value,
+      fromCurrency: fromCurrency,
+      toCurrency: toCurrency
+  };
+  // calls the API with POST method with data in it
+  fetch("http://localhost:3000/currency", {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+  }).then(response => {
       response.json().then(data => {
-        if (data.error) {
-          console.log(data.error);
-        } else {
-          currency.textContent = data.body;
-        }
+          if (data.error) {
+            console.log(data.error);
+          } else {
+            currency.textContent = value + fromCurrency + " = " + value*(data.body) + " " + toCurrency;
+          }
       });
-    });
   });
+});
